@@ -9,8 +9,14 @@
 import SpriteKit
 
 class GameScene: SKScene {
+
+  let player = SKSpriteNode(imageNamed: "player")
+  
   override func didMoveToView(view: SKView) {
     /* Setup your scene here */
+    self.backgroundColor = SKColor.whiteColor()
+    self.player.position =  CGPointMake(self.player.size.width/2, self.frame.size.height/2)
+    self.addChild(self.player)
   }
 
   override func touchesBegan(touches: NSSet, withEvent event: UIEvent) {
